@@ -1,5 +1,7 @@
 class ProductsController < RankingController
 
-  def 
+  def index
+  end
+
 
 end
