@@ -1,5 +1,6 @@
 TechReviewSite::Application.routes.draw do
 
-  resources only: :index
+  resources :products, only: :index
+  root 'products#index'
 
 end
