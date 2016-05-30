@@ -11,7 +11,7 @@ class Scraping
     detail = page.at('.outline p').inner_text if page.at('.outline p').inner_text
     open_date = page.at('.opn_date strong').inner_text if page.at('.opn_date strong')
 
-    product = Products.where(title: title, image_url: image_url, director: director, detail: detail, open_date: open_date).first_or_initialize
+    product = Product.where(title: title, image_url: image_url, director: director, detail: detail, open_date: open_date).first_or_initialize
     product.save
   end
 
