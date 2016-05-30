@@ -6,6 +6,8 @@ class CreateReviews < ActiveRecord::Migration
       t.text :review
       t.integer :product_id
       t.timestamps
+
+      t.timestamps
     end
   end
 end
