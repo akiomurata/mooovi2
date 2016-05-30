@@ -3551,3 +3551,10 @@ Processing by ProductsController#show as HTML
   [1m[35mProducts Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1
   Rendered products/show.html.erb within layouts/review_site (0.2ms)
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (18.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateReviews (20160530074049)
+  [1m[35m (64.7ms)[0m  CREATE TABLE `reviews` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nickname` varchar(255), `rate` int(11), `review` text, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (2.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160530074049')
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
